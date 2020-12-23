@@ -1,5 +1,6 @@
 # DB 設計
 
+
 ## users table
 
 | Column             | Type                | Options                 |
@@ -72,4 +73,4 @@ has_one :addresses
 ### Association
 has_one :purchases
 
-- 
+
