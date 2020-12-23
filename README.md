@@ -53,7 +53,7 @@ belongs_to :user
 
 ### Association
 has_many :users
-has_many :addresses
+has_one :addresses
 
 
 
@@ -70,6 +70,6 @@ has_many :addresses
 | purchase    | references            | null: false, foreign_key: true |
 
 ### Association
-has_one:purchases
+has_one :purchases
 
 - 
