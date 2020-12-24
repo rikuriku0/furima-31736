@@ -72,7 +72,4 @@ has_one :address
 ### Association
 belongs_to :purchase
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0923a60b0968c817747b35da9046861f154b2801
