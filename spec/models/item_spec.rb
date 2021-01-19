@@ -92,7 +92,37 @@ RSpec.describe Item, type: :model do
         @item.price = 1_000_000_0
         @item.valid?
         expect(@item.errors.full_messages).to include("Price is not included in the list")          
-      end     
+      end 
+      
+      it "category_idが0では登録できないこと" do
+        @item.category_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Category must be other than 0")          
+      end  
+
+      it "prefecture_idが0では登録できないこと" do
+        @item.prefecture_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Prefecture must be other than 0")          
+      end  
+
+      it "sale_status_idが0では登録できないこと" do
+        @item.sale_status_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Sale status must be other than 0")          
+      end  
+
+      it "scheduled_delivery_idが0では登録できないこと" do
+        @item.scheduled_delivery_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Scheduled delivery must be other than 0")          
+      end  
+
+      it "shipping_fee_status_idが0では登録できないこと" do
+        @item.shipping_fee_status_id = 0
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Shipping fee status must be other than 0")          
+      end  
     end
   end
 end
