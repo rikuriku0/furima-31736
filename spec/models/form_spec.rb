@@ -45,7 +45,7 @@ RSpec.describe Form, type: :model do
     it 'buildingは空でも保存できること' do
       @form.building = nil
       @form.valid?
-      expect(@form.errors.full_messages).to include()
+      expect(@form).to be_valid
     end
     it 'phone_numberが空だと保存できないこと' do
       @form.phone_number = nil
