@@ -6,6 +6,7 @@ RSpec.describe Form, type: :model do
       @user = FactoryBot.create(:user)
       @item = FactoryBot.create(:item)
       @form = FactoryBot.build(:form, item_id: @item.id, user_id: @user.id)
+      sleep(1)
     end
 
     it 'すべての値が正しく入力されていれば保存できること' do
@@ -25,6 +26,11 @@ RSpec.describe Form, type: :model do
       @form.prefecture_id = nil
       @form.valid?
       expect(@form.errors.full_messages).to include("Prefecture is not a number")
+    end
+    it 'prefecture_idが0だと保存できないこと' do
+      @form.prefecture_id = '0'
+      @form.valid?
+      expect(@form.errors.full_messages).to include("Prefecture must be other than 0")
     end
     it 'cityが空だと保存できないこと' do
       @form.city = nil
