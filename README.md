@@ -12,7 +12,7 @@ https://furima-31736-31736.herokuapp.com/
 Herokuでデプロイしているため、Herokuの仕様により本番環境にアクセス頂いた際に画像リンクが切れている可能性がございます。
 
 ID/Pass
-ID: ruku
+ID: riku
 Pass: 726
 テスト用アカウント等
 購入者用
